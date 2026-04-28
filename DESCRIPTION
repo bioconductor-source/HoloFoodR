@@ -1,6 +1,6 @@
 Package: HoloFoodR
 Type: Package
-Version: 1.5.0
+Version: 1.6.0
 Authors@R:
     c(
     person(
