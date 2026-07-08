@@ -420,7 +420,7 @@ sessionInfo()
 #> [8] base     
 #> 
 #> other attached packages:
-#>  [1] HoloFoodR_1.2.0                 TreeSummarizedExperiment_2.21.0
+#>  [1] HoloFoodR_1.4.0                 TreeSummarizedExperiment_2.21.0
 #>  [3] Biostrings_2.81.5               XVector_0.53.0                 
 #>  [5] SingleCellExperiment_1.35.1     MultiAssayExperiment_1.39.0    
 #>  [7] SummarizedExperiment_1.43.0     Biobase_2.73.1                 
@@ -443,12 +443,13 @@ sessionInfo()
 #> [28] crayon_1.5.3         jquerylib_0.1.4      BiocParallel_1.47.0 
 #> [31] DelayedArray_0.39.3  cachem_1.1.0         abind_1.4-8         
 #> [34] nlme_3.1-169         tidyselect_1.2.1     digest_0.6.39       
-#> [37] purrr_1.2.2          dplyr_1.2.1          bookdown_0.47       
-#> [40] fastmap_1.2.0        grid_4.6.1           cli_3.6.6           
-#> [43] SparseArray_1.13.2   magrittr_2.0.5       S4Arrays_1.13.0     
-#> [46] ape_5.8-1            rappdirs_0.3.4       rmarkdown_2.31      
-#> [49] otel_0.2.0           ragg_1.5.2           evaluate_1.0.5      
-#> [52] rlang_1.3.0          Rcpp_1.1.2           glue_1.8.1          
-#> [55] tidytree_0.4.8       BiocManager_1.30.27  jsonlite_2.0.0      
-#> [58] R6_2.6.1             systemfonts_1.3.2    fs_2.1.0
+#> [37] stringi_1.8.7        purrr_1.2.2          dplyr_1.2.1         
+#> [40] bookdown_0.47        fastmap_1.2.0        grid_4.6.1          
+#> [43] cli_3.6.6            SparseArray_1.13.2   magrittr_2.0.5      
+#> [46] S4Arrays_1.13.0      ape_5.8-1            rappdirs_0.3.4      
+#> [49] rmarkdown_2.31       otel_0.2.0           ragg_1.5.2          
+#> [52] evaluate_1.0.5       rlang_1.3.0          Rcpp_1.1.2          
+#> [55] glue_1.8.1           tidytree_0.4.8       BiocManager_1.30.27 
+#> [58] jsonlite_2.0.0       R6_2.6.1             systemfonts_1.3.2   
+#> [61] fs_2.1.0
 ```
