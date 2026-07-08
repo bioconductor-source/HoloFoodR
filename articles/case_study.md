@@ -722,7 +722,7 @@ model <- prepare_mofa(
 
 # Train model
 model <- run_mofa(model, use_basilisk = TRUE)
-#> Warning in run_mofa(model, use_basilisk = TRUE): No output filename provided. Using /tmp/Rtmp9U9Wtq/mofa_20260708-182813.hdf5 to store the trained model.
+#> Warning in run_mofa(model, use_basilisk = TRUE): No output filename provided. Using /tmp/RtmpzNZkiy/mofa_20260708-185151.hdf5 to store the trained model.
 #> Connecting to the mofapy2 package using basilisk. 
 #>     Set 'use_basilisk' to FALSE if you prefer to manually set the python binary using 'reticulate'.
 #> + /github/home/.pyenv/versions/3.12.12/bin/python3.12 -m venv /github/home/.cache/R/basilisk/1.25.0/MOFA2/1.23.0/mofa_env
@@ -899,7 +899,7 @@ sessionInfo()
 #>  [5] patchwork_1.3.2                 MOFA2_1.23.0                   
 #>  [7] miaViz_1.21.1                   ggraph_2.2.2                   
 #>  [9] ggplot2_4.0.3                   mia_1.21.3                     
-#> [11] MGnifyR_1.9.0                   HoloFoodR_1.4.0                
+#> [11] MGnifyR_1.9.0                   HoloFoodR_1.7.0                
 #> [13] TreeSummarizedExperiment_2.21.0 Biostrings_2.81.5              
 #> [15] XVector_0.53.0                  SingleCellExperiment_1.35.1    
 #> [17] MultiAssayExperiment_1.39.0     SummarizedExperiment_1.43.0    

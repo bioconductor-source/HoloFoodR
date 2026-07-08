@@ -420,7 +420,7 @@ sessionInfo()
 #> [8] base     
 #> 
 #> other attached packages:
-#>  [1] HoloFoodR_1.4.0                 TreeSummarizedExperiment_2.21.0
+#>  [1] HoloFoodR_1.7.0                 TreeSummarizedExperiment_2.21.0
 #>  [3] Biostrings_2.81.5               XVector_0.53.0                 
 #>  [5] SingleCellExperiment_1.35.1     MultiAssayExperiment_1.39.0    
 #>  [7] SummarizedExperiment_1.43.0     Biobase_2.73.1                 

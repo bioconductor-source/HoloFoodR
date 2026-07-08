@@ -12,16 +12,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/EBI-Metagenomics/HoloFoodR/blob/RELEASE_3_22/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/EBI-Metagenomics/HoloFoodR/blob/devel/DESCRIPTION)
 
 Borman T, Sannikov A, Lahti L (2026). *HoloFoodR: R interface to EBI
-HoloFood resource*. R package version 1.4.0,
+HoloFood resource*. R package version 1.7.0,
 <https://github.com/EBI-Metagenomics/HoloFoodR>.
 
     @Manual{,
       title = {HoloFoodR: R interface to EBI HoloFood resource},
       author = {Tuomas Borman and Artur Sannikov and Leo Lahti},
       year = {2026},
-      note = {R package version 1.4.0},
+      note = {R package version 1.7.0},
       url = {https://github.com/EBI-Metagenomics/HoloFoodR},
     }
