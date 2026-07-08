@@ -31,8 +31,7 @@ Once installed, `HoloFoodR` is made available in the usual way.
 ``` r
 
 library(HoloFoodR)
-#> Loading required package: TreeSummarizedExperiment
-#> Loading required package: SingleCellExperiment
+#> Loading required package: MultiAssayExperiment
 #> Loading required package: SummarizedExperiment
 #> Loading required package: MatrixGenerics
 #> Loading required package: matrixStats
@@ -106,6 +105,8 @@ library(HoloFoodR)
 #> The following objects are masked from 'package:matrixStats':
 #> 
 #>     anyMissing, rowMedians
+#> Loading required package: TreeSummarizedExperiment
+#> Loading required package: SingleCellExperiment
 #> Loading required package: Biostrings
 #> Loading required package: XVector
 #> 
@@ -113,7 +114,6 @@ library(HoloFoodR)
 #> The following object is masked from 'package:base':
 #> 
 #>     strsplit
-#> Loading required package: MultiAssayExperiment
 ```
 
 ## Functionalities
@@ -212,7 +212,7 @@ in
 ``` r
 
 mae <- getResult(sample_ids)
-#> Warning: Data for the following samples cannot be found. The sample types are metagenomic_assembly, host_genomic, transcriptomic and metatranscriptomic. (Note that metagenomic assemblies can be found from the MGnify database. See MGnifyR package.):
+#> Warning: Data for the following samples cannot be found. The sample types are metagenomic_assembly, host_genomic, transcriptomic and metatranscriptomic (Note that metagenomic assemblies can be found from the MGnify database. See MGnifyR package.):
 #> 'SAMEA10130025', 'SAMEA13389405', 'SAMEA13389406', 'SAMEA13901590', 'SAMEA13901591', 'SAMEA13929779', 'SAMEA7697591', 'SAMEA10130091', 'SAMEA13389692', 'SAMEA13389693', 'SAMEA13901708', 'SAMEA7571845', 'SAMEA10158030', 'SAMEA13389419', 'SAMEA13389420', 'SAMEA13901594', 'SAMEA13901595', 'SAMEA13929781', 'SAMEA7697592', 'SAMEA10130039', 'SAMEA13389496', 'SAMEA13389497', 'SAMEA13901618', 'SAMEA13901619', 'SAMEA13929785', 'SAMEA7571815', 'SAMEA10130112', 'SAMEA13389794', 'SAMEA13389795', 'SAMEA13901758', 'SAMEA13901759', 'SAMEA13929811', 'SAMEA7571864', 'SAMEA10158022', 'SAMEA13389146', 'SAMEA13389147', 'SAMEA13901511', 'SAMEA13901512', 'SAMEA13929767', 'SAMEA7571777', 'SAMEA10130019', 'SAMEA13389353', 'SAMEA13389354', 'SAMEA13389355', 'SAMEA13901574', 'SAMEA13901575', 'SAMEA14095991', 'SAMEA7722475', 'SAMEA10130101', 'SAMEA13389738', 'SAMEA13389739', 'SAMEA13901730', 'SAMEA13901731', 'SAMEA13929802', 'SAMEA7571856', 'SAMEA10455480', 'SAMEA13389220', 'SAMEA10129993', 'SAMEA13389183', 'SAMEA13389184', 'SAMEA13901520', 'SAMEA13901521', 'SAMEA7697579', 'SAMEA10130017', 'SAMEA13389345', 'SAMEA13389346', 'SAMEA13901571', 'SAMEA13901572', 'SAMEA13929772', 'SAMEA7571801', 'SAMEA10130113', 'SAMEA13389807', 'SAMEA13389808', 'SAMEA13901762', 'SAMEA13901763', 'SAMEA13929813', 'SAMEA7571866', 'SAMEA10455481', 'SAMEA13389227', 'SAMEA10455479', 'SAMEA13389169', 'SAMEA10130020', 'SAMEA13389357', 'SAMEA13389358', 'SAMEA13901576', 'SAMEA13901577', 'SAMEA13929773', 'SAMEA7697587', 'SAMEA10130100', 'SAMEA13389734', 'SAMEA13389735', 'SAMEA13901728', 'SAMEA13901729', 'SAMEA13929801', 'SAMEA7697622', 'SAMEA10130016', 'SAMEA13389342', 'SAMEA13389343', 'SAMEA13901569', 'SAMEA13901570', 'SAMEA13929771', 'SAMEA7571800', 'SAMEA10130040', 'SAMEA13389503', 'SAMEA13389504', 'SAMEA13901620', 'SAMEA13901621', 'SAMEA13929786', 'SAMEA7571816', 'SAMEA10129979', 'SAMEA13389081', 'SAMEA13389082', 'SAMEA13901489', 'SAMEA13901490', 'SAMEA7571769', 'SAMEA10130002', 'SAMEA13389243', 'SAMEA13389244', 'SAMEA13901540', 'SAMEA13901541', 'SAMEA7697582', 'SAMEA10129985', 'SAMEA13389133', 'SAMEA13389134', 'SAMEA13901505', 'SAMEA13901506', 'SAMEA13929764', 'SAMEA7571775', 'SAMEA10455476', 'SAMEA13389110', 'SAMEA10130031', 'SAMEA13389443', 'SAMEA13389444', 'SAMEA13901602', 'SAMEA13901603', 'SAMEA7571811', 'SAMEA10130023', 'SAMEA13389395', 'SAMEA13389396', 'SAMEA13901586', 'SAMEA13901587', 'SAMEA13929777', 'SAMEA7571806', 'SAMEA10130090', 'SAMEA13389687', 'SAMEA13389688', 'SAMEA13901707', 'SAMEA7571844', 'SAMEA10130119', 'SAMEA13389832', 'SAMEA13389833', 'SAMEA13901773', 'SAMEA13929818', 'SAMEA7697633', 'SAMEA10129996', 'SAMEA13389204', 'SAMEA13389205', 'SAMEA13901529', 'SAMEA13901530', 'SAMEA7697580', 'SAMEA10130088', 'SAMEA13389677', 'SAMEA13389678', 'SAMEA13901704', 'SAMEA13929799', 'SAMEA7571843'
 mae
 #> A MultiAssayExperiment object of 8 listed
@@ -269,8 +269,8 @@ features.
 
 `MGnifyR` is a package that can be utilized to fetch metagenomics data
 from MGnify database. From the `MGnifyR` package, we can use
-`MGnifyR::searchAnalysis()` function to search analyses based on sample
-IDs that we have.
+[`MGnifyR::searchAnalysis()`](https://rdrr.io/pkg/MGnifyR/man/searchAnalysis.html)
+function to search analyses based on sample IDs that we have.
 
 ``` r
 
@@ -325,10 +325,11 @@ mae_metagenomic
 #>  exportClass() - save data to flat files
 ```
 
-`MGnifyR::getResult()` returns `MAE` object just like `HoloFoodR`.
-However, metagenomic data points to individual analyses instead of
-samples. We can harmonize the data by replacing analysis IDs with sample
-IDs, and then we can combine the data to single `MAE`.
+[`MGnifyR::getResult()`](https://rdrr.io/pkg/MGnifyR/man/getResult.html)
+returns `MAE` object just like `HoloFoodR`. However, metagenomic data
+points to individual analyses instead of samples. We can harmonize the
+data by replacing analysis IDs with sample IDs, and then we can combine
+the data to single `MAE`.
 
 ``` r
 
@@ -364,7 +365,7 @@ data, you can utilize the getMetaboLights() function to retrieve
 information on available data. Moreover, it returns processed
 metabolomic data (for processed data, you can also use
 `getReturn(x, get.metabolomic=TRUE)`). Below, we retrieve all the
-metabolomic data associated with HoloFood.
+processed (mapped) metabolomic data associated with HoloFood.
 
 ``` r
 
@@ -419,9 +420,9 @@ sessionInfo()
 #> [8] base     
 #> 
 #> other attached packages:
-#>  [1] HoloFoodR_1.0.0                 MultiAssayExperiment_1.39.0    
-#>  [3] TreeSummarizedExperiment_2.21.0 Biostrings_2.81.5              
-#>  [5] XVector_0.53.0                  SingleCellExperiment_1.35.1    
+#>  [1] HoloFoodR_1.6.0                 TreeSummarizedExperiment_2.21.0
+#>  [3] Biostrings_2.81.5               XVector_0.53.0                 
+#>  [5] SingleCellExperiment_1.35.1     MultiAssayExperiment_1.39.0    
 #>  [7] SummarizedExperiment_1.43.0     Biobase_2.73.1                 
 #>  [9] GenomicRanges_1.65.0            Seqinfo_1.3.0                  
 #> [11] IRanges_2.47.2                  S4Vectors_0.51.5               
@@ -438,16 +439,17 @@ sessionInfo()
 #> [16] lifecycle_1.0.5      compiler_4.6.1       treeio_1.37.0       
 #> [19] textshaping_1.0.5    codetools_0.2-20     htmltools_0.5.9     
 #> [22] sass_0.4.10          yaml_2.3.12          lazyeval_0.2.3      
-#> [25] pkgdown_2.2.1        pillar_1.11.1        crayon_1.5.3        
-#> [28] jquerylib_0.1.4      tidyr_1.3.2          BiocParallel_1.47.0 
+#> [25] tidyr_1.3.2          pkgdown_2.2.1        pillar_1.11.1       
+#> [28] crayon_1.5.3         jquerylib_0.1.4      BiocParallel_1.47.0 
 #> [31] DelayedArray_0.39.3  cachem_1.1.0         abind_1.4-8         
 #> [34] nlme_3.1-169         tidyselect_1.2.1     digest_0.6.39       
-#> [37] purrr_1.2.2          dplyr_1.2.1          bookdown_0.47       
-#> [40] fastmap_1.2.0        grid_4.6.1           cli_3.6.6           
-#> [43] SparseArray_1.13.2   magrittr_2.0.5       S4Arrays_1.13.0     
-#> [46] ape_5.8-1            rappdirs_0.3.4       rmarkdown_2.31      
-#> [49] otel_0.2.0           ragg_1.5.2           evaluate_1.0.5      
-#> [52] rlang_1.3.0          Rcpp_1.1.2           glue_1.8.1          
-#> [55] tidytree_0.4.8       BiocManager_1.30.27  jsonlite_2.0.0      
-#> [58] R6_2.6.1             systemfonts_1.3.2    fs_2.1.0
+#> [37] stringi_1.8.7        purrr_1.2.2          dplyr_1.2.1         
+#> [40] bookdown_0.47        fastmap_1.2.0        grid_4.6.1          
+#> [43] cli_3.6.6            SparseArray_1.13.2   magrittr_2.0.5      
+#> [46] S4Arrays_1.13.0      ape_5.8-1            rappdirs_0.3.4      
+#> [49] rmarkdown_2.31       otel_0.2.0           ragg_1.5.2          
+#> [52] evaluate_1.0.5       rlang_1.3.0          Rcpp_1.1.2          
+#> [55] glue_1.8.1           tidytree_0.4.8       BiocManager_1.30.27 
+#> [58] jsonlite_2.0.0       R6_2.6.1             systemfonts_1.3.2   
+#> [61] fs_2.1.0
 ```

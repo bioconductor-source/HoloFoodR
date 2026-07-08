@@ -18,5 +18,8 @@ details on the JSONAPI implementation.
 
 Authors:
 
+- Artur Sannikov <arsann@utu.fi>
+  ([ORCID](https://orcid.org/0000-0001-7765-123X))
+
 - Leo Lahti <leo.lahti@iki.fi>
   ([ORCID](https://orcid.org/0000-0001-5537-637X))

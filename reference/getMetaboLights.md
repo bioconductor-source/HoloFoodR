@@ -5,7 +5,7 @@ Get metabolomic data from MetaboLights database
 ## Usage
 
 ``` r
-getMetaboLights(study.id, ...)
+getMetaboLights(study.id, output = "list", ...)
 
 getMetaboLightsFile(study.id, file, ...)
 ```
@@ -16,6 +16,12 @@ getMetaboLightsFile(study.id, file, ...)
 
   `character vector` specifying the study identifier of data that is
   going to be fetched from the MetaboLights database.
+
+- output:
+
+  `character scalar` specifying output format. Must be `"list"`,
+  `"TreeSE"` (`TreeSummarizedExperiment`) or `"SE"`
+  (`SummarizedExperiment`). (Default: `"list"`)
 
 - ...:
 
@@ -28,13 +34,19 @@ getMetaboLightsFile(study.id, file, ...)
   - **timeout** `Integer scalar` specifying timeout in seconds for
     loading a file. (Default: `5*60`)
 
+  - **ion.mode** `Character scalar` specifying metabolite assignment
+    files to fetch. If `"positive"` only positive ions are fetched.
+    Similarly `"negative"` means that negative ions are fetched if such
+    data exists. By selecting `"both"`, one can fetch both positive and
+    negative ions. (Default: `"both"`)
+
 - file:
 
   `character vector` specifying the files that are being fetched.
 
 ## Value
 
-`list`
+`list`, `SummarizedExperiment` or `TreeSummarizedExperiment`
 
 ## Details
 
@@ -64,9 +76,11 @@ object, specifically designed for metabolomics spectra data.
 # This example is not run, because the server fails to respond sometimes.
 if( FALSE ){
     res <- getMetaboLights("MTBLS4381")
-    file_paths <- getMetaLightsFile(
+    file_paths <- getMetaboLightsFile(
         study.id = "MTBLS4381",
         file = res[["assay_meta"]][["Raw Spectral Data File"]]
         )
+    # Get data as SummarizedExperiment
+    se <- getMetaboLights("MTBLS3540", output = "SE")
 }
 ```

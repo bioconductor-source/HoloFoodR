@@ -63,18 +63,19 @@ HoloFood.
 Furthermore, while the HoloFoodR database does not include metagenomic
 assembly data, users can access such data from the MGnify database. The
 MGnifyR package provides a convenient interface for accessing this
-database. By employing `MGnifyR::getResult()`, users can obtain data
-formatted as a `MultiAssayExperiment` object, containing multiple
-`TreeSummarizedExperiment` objects. Consequently, data from both
-HoloFood and MGnify databases are inherently compatible for subsequent
-downstream analysis.
+database. By employing
+[`MGnifyR::getResult()`](https://rdrr.io/pkg/MGnifyR/man/getResult.html),
+users can obtain data formatted as a `MultiAssayExperiment` object,
+containing multiple `TreeSummarizedExperiment` objects. Consequently,
+data from both HoloFood and MGnify databases are inherently compatible
+for subsequent downstream analysis.
 
 ## See also
 
 [`getData`](getData.md)
 [`TreeSummarizedExperiment`](https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-class.html)
 [`MultiAssayExperiment`](https://github.com/waldronlab/MultiAssayExperiment/reference/MultiAssayExperiment-class.html)
-`MGnifyR:getResult`
+[`MGnifyR:getResult`](https://rdrr.io/pkg/MGnifyR/man/getResult.html)
 
 ## Examples
 
@@ -85,7 +86,7 @@ samples <- doQuery("samples", animal_accession = "SAMEA112904746")
 
 # Get the data
 mae <- getResult(samples[["accession"]])
-#> Warning: Data for the following samples cannot be found. The sample types are metagenomic_assembly, host_genomic, transcriptomic and metatranscriptomic. (Note that metagenomic assemblies can be found from the MGnify database. See MGnifyR package.):
+#> Warning: Data for the following samples cannot be found. The sample types are metagenomic_assembly, host_genomic, transcriptomic and metatranscriptomic (Note that metagenomic assemblies can be found from the MGnify database. See MGnifyR package.):
 #> 'SAMEA10130039', 'SAMEA13389496', 'SAMEA13389497', 'SAMEA13901618', 'SAMEA13901619', 'SAMEA13929785', 'SAMEA7571815'
 mae
 #> A MultiAssayExperiment object of 8 listed

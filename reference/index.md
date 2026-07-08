@@ -6,6 +6,9 @@
 
   `HoloFoodR` package
 
+- [`addMGnify()`](addMGnify.md) : Add results from MGnifyR to HoloFoodR
+  results
+
 - [`doQuery()`](doQuery.md) : Search HoloFood database for animals,
   genome catalogues, samples, or viral catalogues
 

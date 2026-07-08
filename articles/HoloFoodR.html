@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">HoloFoodR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +31,12 @@
       <ul class="navbar-nav me-auto">
 <li class="active nav-item"><a class="nav-link" href="../articles/HoloFoodR.html">Get started</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/case_study.html">HoloFoodR: a statistical programming framework for holo-omics data integration workflows</a></li>
+  </ul>
+</li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -54,7 +60,7 @@
             
             <h4 data-toc-skip class="date">2026-07-08</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/EBI-Metagenomics/HoloFoodR/blob/RELEASE_3_20/vignettes/HoloFoodR.Rmd" class="external-link"><code>vignettes/HoloFoodR.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/EBI-Metagenomics/HoloFoodR/blob/RELEASE_3_23/vignettes/HoloFoodR.Rmd" class="external-link"><code>vignettes/HoloFoodR.Rmd</code></a></small>
       <div class="d-none name"><code>HoloFoodR.Rmd</code></div>
     </div>
 
@@ -88,8 +94,7 @@ installed using via <code>BiocManager</code>.</p>
 way.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/EBI-Metagenomics/HoloFoodR" class="external-link">HoloFoodR</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Loading required package: TreeSummarizedExperiment</span></span>
-<span><span class="co">#&gt; Loading required package: SingleCellExperiment</span></span>
+<span><span class="co">#&gt; Loading required package: MultiAssayExperiment</span></span>
 <span><span class="co">#&gt; Loading required package: SummarizedExperiment</span></span>
 <span><span class="co">#&gt; Loading required package: MatrixGenerics</span></span>
 <span><span class="co">#&gt; Loading required package: matrixStats</span></span>
@@ -163,14 +168,15 @@ way.</p>
 <span><span class="co">#&gt; The following objects are masked from 'package:matrixStats':</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     anyMissing, rowMedians</span></span>
+<span><span class="co">#&gt; Loading required package: TreeSummarizedExperiment</span></span>
+<span><span class="co">#&gt; Loading required package: SingleCellExperiment</span></span>
 <span><span class="co">#&gt; Loading required package: Biostrings</span></span>
 <span><span class="co">#&gt; Loading required package: XVector</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Attaching package: 'Biostrings'</span></span>
 <span><span class="co">#&gt; The following object is masked from 'package:base':</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     strsplit</span></span>
-<span><span class="co">#&gt; Loading required package: MultiAssayExperiment</span></span></code></pre></div>
+<span><span class="co">#&gt;     strsplit</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="functionalities">Functionalities<a class="anchor" aria-label="anchor" href="#functionalities"></a>
@@ -244,7 +250,7 @@ function. It returns the data in <em><a href="https://bioconductor.org/packages/
 (<code>MAE</code>) format.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mae</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getResult.html">getResult</a></span><span class="op">(</span><span class="va">sample_ids</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: Data for the following samples cannot be found. The sample types are metagenomic_assembly, host_genomic, transcriptomic and metatranscriptomic. (Note that metagenomic assemblies can be found from the MGnify database. See MGnifyR package.):</span></span>
+<span><span class="co">#&gt; Warning: Data for the following samples cannot be found. The sample types are metagenomic_assembly, host_genomic, transcriptomic and metatranscriptomic (Note that metagenomic assemblies can be found from the MGnify database. See MGnifyR package.):</span></span>
 <span><span class="co">#&gt; 'SAMEA10130025', 'SAMEA13389405', 'SAMEA13389406', 'SAMEA13901590', 'SAMEA13901591', 'SAMEA13929779', 'SAMEA7697591', 'SAMEA10130091', 'SAMEA13389692', 'SAMEA13389693', 'SAMEA13901708', 'SAMEA7571845', 'SAMEA10158030', 'SAMEA13389419', 'SAMEA13389420', 'SAMEA13901594', 'SAMEA13901595', 'SAMEA13929781', 'SAMEA7697592', 'SAMEA10130039', 'SAMEA13389496', 'SAMEA13389497', 'SAMEA13901618', 'SAMEA13901619', 'SAMEA13929785', 'SAMEA7571815', 'SAMEA10130112', 'SAMEA13389794', 'SAMEA13389795', 'SAMEA13901758', 'SAMEA13901759', 'SAMEA13929811', 'SAMEA7571864', 'SAMEA10158022', 'SAMEA13389146', 'SAMEA13389147', 'SAMEA13901511', 'SAMEA13901512', 'SAMEA13929767', 'SAMEA7571777', 'SAMEA10130019', 'SAMEA13389353', 'SAMEA13389354', 'SAMEA13389355', 'SAMEA13901574', 'SAMEA13901575', 'SAMEA14095991', 'SAMEA7722475', 'SAMEA10130101', 'SAMEA13389738', 'SAMEA13389739', 'SAMEA13901730', 'SAMEA13901731', 'SAMEA13929802', 'SAMEA7571856', 'SAMEA10455480', 'SAMEA13389220', 'SAMEA10129993', 'SAMEA13389183', 'SAMEA13389184', 'SAMEA13901520', 'SAMEA13901521', 'SAMEA7697579', 'SAMEA10130017', 'SAMEA13389345', 'SAMEA13389346', 'SAMEA13901571', 'SAMEA13901572', 'SAMEA13929772', 'SAMEA7571801', 'SAMEA10130113', 'SAMEA13389807', 'SAMEA13389808', 'SAMEA13901762', 'SAMEA13901763', 'SAMEA13929813', 'SAMEA7571866', 'SAMEA10455481', 'SAMEA13389227', 'SAMEA10455479', 'SAMEA13389169', 'SAMEA10130020', 'SAMEA13389357', 'SAMEA13389358', 'SAMEA13901576', 'SAMEA13901577', 'SAMEA13929773', 'SAMEA7697587', 'SAMEA10130100', 'SAMEA13389734', 'SAMEA13389735', 'SAMEA13901728', 'SAMEA13901729', 'SAMEA13929801', 'SAMEA7697622', 'SAMEA10130016', 'SAMEA13389342', 'SAMEA13389343', 'SAMEA13901569', 'SAMEA13901570', 'SAMEA13929771', 'SAMEA7571800', 'SAMEA10130040', 'SAMEA13389503', 'SAMEA13389504', 'SAMEA13901620', 'SAMEA13901621', 'SAMEA13929786', 'SAMEA7571816', 'SAMEA10129979', 'SAMEA13389081', 'SAMEA13389082', 'SAMEA13901489', 'SAMEA13901490', 'SAMEA7571769', 'SAMEA10130002', 'SAMEA13389243', 'SAMEA13389244', 'SAMEA13901540', 'SAMEA13901541', 'SAMEA7697582', 'SAMEA10129985', 'SAMEA13389133', 'SAMEA13389134', 'SAMEA13901505', 'SAMEA13901506', 'SAMEA13929764', 'SAMEA7571775', 'SAMEA10455476', 'SAMEA13389110', 'SAMEA10130031', 'SAMEA13389443', 'SAMEA13389444', 'SAMEA13901602', 'SAMEA13901603', 'SAMEA7571811', 'SAMEA10130023', 'SAMEA13389395', 'SAMEA13389396', 'SAMEA13901586', 'SAMEA13901587', 'SAMEA13929777', 'SAMEA7571806', 'SAMEA10130090', 'SAMEA13389687', 'SAMEA13389688', 'SAMEA13901707', 'SAMEA7571844', 'SAMEA10130119', 'SAMEA13389832', 'SAMEA13389833', 'SAMEA13901773', 'SAMEA13929818', 'SAMEA7697633', 'SAMEA10129996', 'SAMEA13389204', 'SAMEA13389205', 'SAMEA13901529', 'SAMEA13901530', 'SAMEA7697580', 'SAMEA10130088', 'SAMEA13389677', 'SAMEA13389678', 'SAMEA13901704', 'SAMEA13929799', 'SAMEA7571843'</span></span>
 <span><span class="va">mae</span></span>
 <span><span class="co">#&gt; A MultiAssayExperiment object of 8 listed</span></span>
@@ -295,19 +301,19 @@ represent features.</p>
 </h3>
 <p><code>MGnifyR</code> is a package that can be utilized to fetch
 metagenomics data from MGnify database. From the <code>MGnifyR</code>
-package, we can use <code>MGnifyR::searchAnalysis()</code> function to
+package, we can use <code><a href="https://rdrr.io/pkg/MGnifyR/man/searchAnalysis.html" class="external-link">MGnifyR::searchAnalysis()</a></code> function to
 search analyses based on sample IDs that we have.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">MGnifyR</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/EBI-Metagenomics/MGnifyR" class="external-link">MGnifyR</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">mg</span> <span class="op">&lt;-</span> <span class="fu">MgnifyClient</span><span class="op">(</span>useCache <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">mg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MGnifyR/man/MgnifyClient.html" class="external-link">MgnifyClient</a></span><span class="op">(</span>useCache <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Get those samples that are metagenomic samples</span></span>
 <span><span class="va">metagenomic_samples</span> <span class="op">&lt;-</span> <span class="va">samples</span><span class="op">[</span></span>
 <span>    <span class="va">samples</span><span class="op">[[</span><span class="st">"sample_type"</span><span class="op">]</span><span class="op">]</span> <span class="op">==</span> <span class="st">"metagenomic_assembly"</span>, <span class="op">]</span></span>
 <span></span>
 <span><span class="co"># Get analysis IDs based on sample IDs</span></span>
-<span><span class="va">analysis_ids</span> <span class="op">&lt;-</span> <span class="fu">searchAnalysis</span><span class="op">(</span></span>
+<span><span class="va">analysis_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MGnifyR/man/searchAnalysis.html" class="external-link">searchAnalysis</a></span><span class="op">(</span></span>
 <span>    <span class="va">mg</span>, type <span class="op">=</span> <span class="st">"samples"</span>, <span class="va">metagenomic_samples</span><span class="op">[[</span><span class="st">"accession"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">analysis_ids</span><span class="op">)</span></span>
@@ -317,7 +323,7 @@ search analyses based on sample IDs that we have.</p>
 <span><span class="co">#&gt; "MGYA00615947"</span></span></code></pre></div>
 <p>Then we can fetch data based on accession IDs.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mae_metagenomic</span> <span class="op">&lt;-</span> <span class="fu">MGnifyR</span><span class="fu">::</span><span class="fu">getResult</span><span class="op">(</span><span class="va">mg</span>, <span class="va">analysis_ids</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mae_metagenomic</span> <span class="op">&lt;-</span> <span class="fu">MGnifyR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MGnifyR/man/getResult.html" class="external-link">getResult</a></span><span class="op">(</span><span class="va">mg</span>, <span class="va">analysis_ids</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mae_metagenomic</span></span>
 <span><span class="co">#&gt; A MultiAssayExperiment object of 6 listed</span></span>
@@ -337,7 +343,7 @@ search analyses based on sample IDs that we have.</p>
 <span><span class="co">#&gt;  *Format() - convert into a long or wide DataFrame</span></span>
 <span><span class="co">#&gt;  assays() - convert ExperimentList to a SimpleList of matrices</span></span>
 <span><span class="co">#&gt;  exportClass() - save data to flat files</span></span></code></pre></div>
-<p><code>MGnifyR::getResult()</code> returns <code>MAE</code> object
+<p><code><a href="https://rdrr.io/pkg/MGnifyR/man/getResult.html" class="external-link">MGnifyR::getResult()</a></code> returns <code>MAE</code> object
 just like <code>HoloFoodR</code>. However, metagenomic data points to
 individual analyses instead of samples. We can harmonize the data by
 replacing analysis IDs with sample IDs, and then we can combine the data
@@ -346,11 +352,11 @@ to single <code>MAE</code>.</p>
 <code class="sourceCode R"><span><span class="co"># Get experiments from metagenomic data</span></span>
 <span><span class="va">exps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://github.com/waldronlab/MultiAssayExperiment/reference/MultiAssayExperiment-methods.html" class="external-link">experiments</a></span><span class="op">(</span><span class="va">mae_metagenomic</span><span class="op">)</span></span>
 <span><span class="co"># Convert analysis names to sample names</span></span>
-<span><span class="va">exps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">exps</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span></span>
+<span><span class="va">exps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">exps</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span></span>
 <span>    <span class="co"># Get corresponding sample ID</span></span>
-<span>    <span class="va">sample_id</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">analysis_ids</span><span class="op">)</span><span class="op">[</span> <span class="fu"><a href="https://rdrr.io/r/base/match.html" class="external-link">match</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="va">analysis_ids</span><span class="op">)</span> <span class="op">]</span></span>
+<span>    <span class="va">sample_id</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">analysis_ids</span><span class="op">)</span><span class="op">[</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/match.html" class="external-link">match</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="va">analysis_ids</span><span class="op">)</span> <span class="op">]</span></span>
 <span>    <span class="co"># Replace analysis ID with sample ID</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">sample_id</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">sample_id</span></span>
 <span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span></span>
 <span></span>
@@ -374,7 +380,7 @@ data, you can utilize the getMetaboLights() function to retrieve
 information on available data. Moreover, it returns processed
 metabolomic data (for processed data, you can also use
 <code>getReturn(x, get.metabolomic=TRUE)</code>). Below, we retrieve all
-the metabolomic data associated with HoloFood.</p>
+the processed (mapped) metabolomic data associated with HoloFood.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Get untargeted metabolomic samples</span></span>
 <span><span class="va">samples</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/doQuery.html">doQuery</a></span><span class="op">(</span><span class="st">"samples"</span>, sample_type <span class="op">=</span> <span class="st">"metabolomic"</span><span class="op">)</span></span>
@@ -422,9 +428,9 @@ for metabolomics spectra data.</p>
 <span><span class="co">#&gt; [8] base     </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; other attached packages:</span></span>
-<span><span class="co">#&gt;  [1] HoloFoodR_1.0.0                 MultiAssayExperiment_1.39.0    </span></span>
-<span><span class="co">#&gt;  [3] TreeSummarizedExperiment_2.21.0 Biostrings_2.81.5              </span></span>
-<span><span class="co">#&gt;  [5] XVector_0.53.0                  SingleCellExperiment_1.35.1    </span></span>
+<span><span class="co">#&gt;  [1] HoloFoodR_1.6.0                 TreeSummarizedExperiment_2.21.0</span></span>
+<span><span class="co">#&gt;  [3] Biostrings_2.81.5               XVector_0.53.0                 </span></span>
+<span><span class="co">#&gt;  [5] SingleCellExperiment_1.35.1     MultiAssayExperiment_1.39.0    </span></span>
 <span><span class="co">#&gt;  [7] SummarizedExperiment_1.43.0     Biobase_2.73.1                 </span></span>
 <span><span class="co">#&gt;  [9] GenomicRanges_1.65.0            Seqinfo_1.3.0                  </span></span>
 <span><span class="co">#&gt; [11] IRanges_2.47.2                  S4Vectors_0.51.5               </span></span>
@@ -441,18 +447,19 @@ for metabolomics spectra data.</p>
 <span><span class="co">#&gt; [16] lifecycle_1.0.5      compiler_4.6.1       treeio_1.37.0       </span></span>
 <span><span class="co">#&gt; [19] textshaping_1.0.5    codetools_0.2-20     htmltools_0.5.9     </span></span>
 <span><span class="co">#&gt; [22] sass_0.4.10          yaml_2.3.12          lazyeval_0.2.3      </span></span>
-<span><span class="co">#&gt; [25] pkgdown_2.2.1        pillar_1.11.1        crayon_1.5.3        </span></span>
-<span><span class="co">#&gt; [28] jquerylib_0.1.4      tidyr_1.3.2          BiocParallel_1.47.0 </span></span>
+<span><span class="co">#&gt; [25] tidyr_1.3.2          pkgdown_2.2.1        pillar_1.11.1       </span></span>
+<span><span class="co">#&gt; [28] crayon_1.5.3         jquerylib_0.1.4      BiocParallel_1.47.0 </span></span>
 <span><span class="co">#&gt; [31] DelayedArray_0.39.3  cachem_1.1.0         abind_1.4-8         </span></span>
 <span><span class="co">#&gt; [34] nlme_3.1-169         tidyselect_1.2.1     digest_0.6.39       </span></span>
-<span><span class="co">#&gt; [37] purrr_1.2.2          dplyr_1.2.1          bookdown_0.47       </span></span>
-<span><span class="co">#&gt; [40] fastmap_1.2.0        grid_4.6.1           cli_3.6.6           </span></span>
-<span><span class="co">#&gt; [43] SparseArray_1.13.2   magrittr_2.0.5       S4Arrays_1.13.0     </span></span>
-<span><span class="co">#&gt; [46] ape_5.8-1            rappdirs_0.3.4       rmarkdown_2.31      </span></span>
-<span><span class="co">#&gt; [49] otel_0.2.0           ragg_1.5.2           evaluate_1.0.5      </span></span>
-<span><span class="co">#&gt; [52] rlang_1.3.0          Rcpp_1.1.2           glue_1.8.1          </span></span>
-<span><span class="co">#&gt; [55] tidytree_0.4.8       BiocManager_1.30.27  jsonlite_2.0.0      </span></span>
-<span><span class="co">#&gt; [58] R6_2.6.1             systemfonts_1.3.2    fs_2.1.0</span></span></code></pre></div>
+<span><span class="co">#&gt; [37] stringi_1.8.7        purrr_1.2.2          dplyr_1.2.1         </span></span>
+<span><span class="co">#&gt; [40] bookdown_0.47        fastmap_1.2.0        grid_4.6.1          </span></span>
+<span><span class="co">#&gt; [43] cli_3.6.6            SparseArray_1.13.2   magrittr_2.0.5      </span></span>
+<span><span class="co">#&gt; [46] S4Arrays_1.13.0      ape_5.8-1            rappdirs_0.3.4      </span></span>
+<span><span class="co">#&gt; [49] rmarkdown_2.31       otel_0.2.0           ragg_1.5.2          </span></span>
+<span><span class="co">#&gt; [52] evaluate_1.0.5       rlang_1.3.0          Rcpp_1.1.2          </span></span>
+<span><span class="co">#&gt; [55] glue_1.8.1           tidytree_0.4.8       BiocManager_1.30.27 </span></span>
+<span><span class="co">#&gt; [58] jsonlite_2.0.0       R6_2.6.1             systemfonts_1.3.2   </span></span>
+<span><span class="co">#&gt; [61] fs_2.1.0</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -461,7 +468,7 @@ for metabolomics spectra data.</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tuomas Borman, Leo Lahti.</p>
+  <p>Developed by Tuomas Borman, Artur Sannikov, Leo Lahti.</p>
 </div>
 
 <div class="pkgdown-footer-right">

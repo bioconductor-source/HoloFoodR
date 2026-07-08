@@ -147,6 +147,9 @@ and vignette ([`vignette("HoloFoodR")`](articles/HoloFoodR.md))
 
   `HoloFoodR` package
 
+- [`addMGnify()`](addMGnify.md) : Add results from MGnifyR to HoloFoodR
+  results
+
 - [`doQuery()`](doQuery.md) : Search HoloFood database for animals,
   genome catalogues, samples, or viral catalogues
 
@@ -163,4 +166,6 @@ and vignette ([`vignette("HoloFoodR")`](articles/HoloFoodR.md))
 
 ### All vignettes
 
+- [HoloFoodR: a statistical programming framework for holo-omics data
+  integration workflows](case_study.md):
 - [HoloFoodR: interface to HoloFoodR database](HoloFoodR.md):

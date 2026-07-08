@@ -9,7 +9,7 @@ or viral catalogues"></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">HoloFoodR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.6.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,6 +19,10 @@ or viral catalogues"></head><body>
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../articles/HoloFoodR.html">Get started</a></li>
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/case_study.html">HoloFoodR: a statistical programming framework for holo-omics data integration workflows</a></li>
+  </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/EBI-Metagenomics/HoloFoodR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -31,7 +35,7 @@ or viral catalogues"></head><body>
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Search HoloFood database for animals, genome catalogues, samples, or viral catalogues</h1>
-      <small class="dont-index">Source: <a href="https://github.com/EBI-Metagenomics/HoloFoodR/blob/RELEASE_3_20/R/doQuery.R" class="external-link"><code>R/doQuery.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/EBI-Metagenomics/HoloFoodR/blob/RELEASE_3_23/R/doQuery.R" class="external-link"><code>R/doQuery.R</code></a></small>
       <div class="d-none name"><code>doQuery.Rd</code></div>
     </div>
 
@@ -97,7 +101,7 @@ for information on filters. You can find help on customizing queries from
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Find animals results. The maximum amount of results is 100. Use filter</span></span></span>
-<span class="r-in"><span><span class="co"># so that only chicken is searched.</span></span></span>
+<span class="r-in"><span><span class="co"># so that only chicken is searched. (See details on customizing queries)</span></span></span>
 <span class="r-in"><span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">doQuery</span><span class="op">(</span><span class="st">"animals"</span>, max.hits <span class="op">=</span> <span class="fl">100</span>, system <span class="op">=</span> <span class="st">"chicken"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        accession  system                                   canonical_url</span>
@@ -129,7 +133,7 @@ for information on filters. You can find help on customizing queries from
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tuomas Borman, Leo Lahti.</p>
+  <p>Developed by Tuomas Borman, Artur Sannikov, Leo Lahti.</p>
 </div>
 
 <div class="pkgdown-footer-right">
