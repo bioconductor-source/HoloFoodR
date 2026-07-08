@@ -34,12 +34,6 @@ getMetaboLightsFile(study.id, file, ...)
   - **timeout** `Integer scalar` specifying timeout in seconds for
     loading a file. (Default: `5*60`)
 
-  - **ion.mode** `Character scalar` specifying metabolite assignment
-    files to fetch. If `"positive"` only positive ions are fetched.
-    Similarly `"negative"` means that negative ions are fetched if such
-    data exists. By selecting `"both"`, one can fetch both positive and
-    negative ions. (Default: `"both"`)
-
 - file:
 
   `character vector` specifying the files that are being fetched.
